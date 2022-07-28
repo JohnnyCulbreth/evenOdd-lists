@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
     <title>evenOdd-lists</title>
 </head>
 <body>
@@ -17,7 +18,7 @@
         <input type="text" name="word" id="word"  placeholder="what's your word?" onkeyup="updateWord(this)"> 
       </div>
       <div>
-        <input type="button" value="Even or Odd?" onclick="">
+        <input type="button" value="Even or Odd?" onclick="handleSubmit()">
       </div>
     </form>
 
@@ -30,24 +31,8 @@
         <ul id="odd"></ul>
     </section>
 
-    <script>
-    let usersWord = ""
-    let oddList = document.getElementById("odd")
+</body>
 
-    function updateWord(element) {
-        usersWord = element.value
-
-        console.log(usersWord)
-    }
-
-    function handleSubmit() {
-        let newListItem = document.createElement('LI')
-        newListItem.innerText = usersWord
-
-        oddList.appendChild(newListItem)
-    }
-        usersWord = ""
-        document.getElementById("even-odd-form").reset()
-    </script>
+<script src="script.js"></script>
 
 </html>
