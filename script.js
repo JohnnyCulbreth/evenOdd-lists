@@ -6,8 +6,15 @@ function updateWord(element) {
     usersWord = element.value
 }
 
-function handleSubmit() {
+window.addEventListener("keydown", function(event) {
+    if (event.code == 'Enter') {
+        handleSubmit()
+}
+})
 
+
+
+function handleSubmit() {
     if (usersWord.length % 2 != 0) {
         let newListItem = document.createElement('LI')
         newListItem.innerText = usersWord
